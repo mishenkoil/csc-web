@@ -1,0 +1,54 @@
+/* arimo-regular - latin */
+@font-face {
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/arimo-v13-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Arimo Regular'), local('Arimo-Regular'),
+    url('../fonts/arimo-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/arimo-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/arimo-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/arimo-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/arimo-v13-latin-regular.svg#Arimo') format('svg'); /* Legacy iOS */
+}
+/* arimo-700 - latin */
+@font-face {
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/arimo-v13-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Arimo Bold'), local('Arimo-Bold'),
+    url('../fonts/arimo-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/arimo-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/arimo-v13-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/arimo-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/arimo-v13-latin-700.svg#Arimo') format('svg'); /* Legacy iOS */
+}
+
+
+body {
+    font-family: Arimo, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 141%;
+    color: #333333;
+}
+
+h1 {
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: rgba(13, 63, 103, 0.7);
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 700;
+    color: #3A4248;
+}
+
+.note-maker {
+    color: rgba(55, 65, 72, 0.5);
+}
