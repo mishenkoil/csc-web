@@ -5,62 +5,95 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--<link rel="stylesheet" href="./css/reset.css">-->
-    <!--<link rel="stylesheet" href="./css/style.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+    <title>CSC Notes</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
-    <header>
-        <span class="logo">
+<header>
+    <span class="logo-picture">
+        <a href="">
+            <img src="img/logo csc.svg" alt="logo">
+        </a>
+    </span>
+
+    <span class="logo-text">
+        <a href="">
             <h1>Notes</h1>
-        </span>
+        </a>
+    </span>
 
-        <span class="search-button">
-        </span>
+    <span class="search-button">
+        <img src="img/search.svg" alt="search button">
+    </span>
 
-        <span class="toolbar">
-        </span>
-    </header>
+    <span class="toolbar">
+        <img src="img/Group.svg" alt="toolbar">
+    </span>
+</header>
 
-    <main>
-        <div class="note-maker">
-            <p>Take a note...</p>
+<main>
+    <div class="note-maker">
+        <p>Take a note...</p>
+        <div class="note-maker-buttons">
+            <span><img src="img/color.svg" alt="choose color"></span>
+            <span class="cancel"><img src="img/cancel.svg" alt="cancel"></span>
+            <span><img src="img/save.svg" alt="save"></span>
         </div>
+    </div>
 
-        <section class="notes">
+    <section class="notes">
+
+        <section>
+            <h2>Assignment #1. Markup</h2>
             <article class="note">
-                <h2>Assignment #1. Markup</h2>
                 <p>Create basic markup using html tags and containers.
                     The main output from this assigment is an index.html file</p>
             </article>
+        </section>
+
+        <section>
+            <h2>Assignment #2. Styling</h2>
             <article class="note">
-                <h2>Assignment #2. Styling</h2>
                 <p>Add styling and provide new styles.css file that linked with
                     existing index.html. Each class should be in BEM naming convention.
                     Each block or element should be reusable as a component. Result is
                     static pixel-perfect markup without interaction</p>
             </article>
+        </section>
+
+        <section>
+            <h2>Assignment #3. Set up project and create React Components</h2>
             <article class="note">
-                <h2>Assignment #3. Set up project and create React Components</h2>
                 <p>Create react app project, move all index.html and styles.css to
                     React components. Split components to chunks</p>
             </article>
-            <article class="note">
-                <h2>Assignment #4. Store & Data Management</h2>
+        </section>
+
+        <section>
+            <h2>Assignment #4. Store & Data Management</h2>
+            <article>
                 <p>Add styling and provide new styles.css file that linked with existing
                     index.html. Each class should be in BEM naming convention. Each block
                     or element should be reusable as a component. Result is static pixel-perfect
                     markup without interaction</p>
             </article>
+        </section>
+
+        <section>
+            <h2>Assignment #5. API</h2>
             <article class="note">
-                <h2>Assignment #5. API</h2>
                 <p>Add styling and provide new styles.css file that linked with existing index.html.
                     Each class should be in BEM naming convention. Each block or element should be
                     reusable as a component. Result is static pixel-perfect markup without interaction</p>
             </article>
         </section>
-    </main>
+
+    </section>
+</main>
 
 
 </body>
