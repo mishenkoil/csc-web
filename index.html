@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
     <title>CSC Notes</title>
@@ -12,22 +12,22 @@
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
 <header>
-    <div class="logo-picture">
+    <div class="logo">
         <a href="">
             <img src="img/logo csc.svg" alt="logo">
             <h1>Notes</h1>
         </a>
     </div>
 
-    <div class="search-button">
-        <form>
-            <input type = "search">
-                <img src="img/search.svg" alt="search button">
-            </input>
-        </form>
-    </div>
+    <form class="search-form">
+        <div class="search-form__content">
+            <input class="search-form__input" type="search">
+            <button class="search-form__button"><img src="img/search.svg" alt="search button"></button>
+        </div>
+    </form>
 
     <button class="toolbar">
         <img src="img/Group.svg" alt="toolbar">
@@ -36,64 +36,45 @@
 
 <main>
     <form class="note-maker">
-        <p>Take a note...</p>
-        <div class="note-maker-buttons">
-            <button><img src="img/color.svg" alt="choose color"></button>
-            <button class="cancel"><img src="img/cancel.svg" alt="cancel"></button>
-            <button type="submit"><img src="img/save.svg" alt="save"></button>
+            <textarea class="note-maker__title">
+                Title
+            </textarea>
+        <textarea class="note-maker__text">
+                Take a note...
+            </textarea>
+        <div class="note-maker__buttons">
+            <div class="note-maker__buttons-left"><img src="img/color.svg" alt="choose color"></div>
+            <div class="note-maker__buttons-right">
+                <button class="note-maker__button-cancel"><img src="img/cancel.svg" alt="cancel"></button>
+                <button class="note-maker__button-submit" type="submit"><img src="img/save.svg" alt="save"></button>
+            </div>
         </div>
     </form>
 
-    <section class="notes">
-
-        <section>
+    <article class="notes">
+        <article class="notes__note">
             <h2>Assignment #1. Markup</h2>
-            <article class="note">
-                <p>Create basic markup using html tags and containers.
-                    The main output from this assigment is an index.html file</p>
-            </article>
-        </section>
-
-        <section>
+            <p>Create basic markup using html tags and containers. The main output from this assigment is an index.html file</p>
+        </article>
+        <article class="notes__note">
             <h2>Assignment #2. Styling</h2>
-            <article class="note">
-                <p>Add styling and provide new styles.css file that linked with
-                    existing index.html. Each class should be in BEM naming convention.
-                    Each block or element should be reusable as a component. Result is
-                    static pixel-perfect markup without interaction</p>
-            </article>
-        </section>
-
-        <section>
+            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
+        </article>
+        <article class="notes__note">
             <h2>Assignment #3. Set up project and create React Components</h2>
-            <article class="note">
-                <p>Create react app project, move all index.html and styles.css to
-                    React components. Split components to chunks</p>
-            </article>
-        </section>
-
-        <section>
+            <p>Create react app project, move all index.html and styles.css to React components. Split components to chunks</p>
+        </article>
+        <article>
             <h2>Assignment #4. Store & Data Management</h2>
-            <article>
-                <p>Add styling and provide new styles.css file that linked with existing
-                    index.html. Each class should be in BEM naming convention. Each block
-                    or element should be reusable as a component. Result is static pixel-perfect
-                    markup without interaction</p>
-            </article>
-        </section>
-
-        <section>
+            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
+        </article>
+        <article class="notes__note">
             <h2>Assignment #5. API</h2>
-            <article class="note">
-                <p>Add styling and provide new styles.css file that linked with existing index.html.
-                    Each class should be in BEM naming convention. Each block or element should be
-                    reusable as a component. Result is static pixel-perfect markup without interaction</p>
-            </article>
-        </section>
-
-    </section>
+            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
+        </article>
+    </article>
 </main>
 
-
 </body>
+
 </html>

@@ -1,57 +1,77 @@
+@font-face {
+    font-family: 'SF UI Display';
+    font-style: normal;
+    src: url('../fonts/sf-ui-display/sf-ui-display-bold.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    font-style: normal;
+    src: url('../fonts/sf-ui-text/SFUIText-Regular.ttf') format('TrueType');
+}
 header {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     width: 100%;
 }
-
-.search-button {
-    margin-left: auto;
-}
-
-.logo-text {
-    margin-left: 6px;
-}
-
 body {
-    font-family: Arimo, sans-serif;
+    font-family: SF UI Text;
     font-size: 17px;
-    font-weight: 400;
-    line-height: 141%;
-    color: #333333;
-    margin: 0% 20% 0% 20%;
+    line-height: 24px;
+    /* or 141% */
+    letter-spacing: -0.03em;
+    color: #20282F;
 }
-
 h1 {
+    font-family: SF UI Display;
     font-size: 26px;
     line-height: 31px;
-    font-weight: 700;
     letter-spacing: -0.01em;
+    /* black-main .7 */
     color: rgba(13, 63, 103, 0.7);
 }
-
 h2 {
+    font-family: SF UI Display;
     font-size: 20px;
-    line-height: 120%;
-    font-weight: 700;
-    color: #3A4248;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
 }
-
 a {
     text-decoration: none;
 }
-
+textarea {
+    border: none;
+    background: none;
+    outline: none;
+}
 .note-maker {
     color: rgba(55, 65, 72, 0.5);
     width: 100%;
 }
-
-.note-maker-buttons {
-    display: inline-flex;
+.note-maker__buttons {
+    display: flex;
     align-items: flex-end;
     width: 100%;
 }
-
 .cancel {
     margin-left: auto;
 }
-
+.logo {
+    width: 134px;
+    height: 32px;
+}
+.note-maker__buttons-right {
+    margin-left: auto;
+}
+.search-form {
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+}
+.toolbar {
+    width: 40px;
+    height: 40px;
+}
