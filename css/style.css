@@ -9,10 +9,55 @@
     font-style: normal;
     src: url('../fonts/sf-ui-text/SFUIText-Regular.ttf') format('TrueType');
 }
-header {
+::-webkit-input-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
     display: flex;
     align-items: center;
-    width: 100%;
+    letter-spacing: -0.03em;
+}
+::-moz-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+}/*Firefox 19+*/
+:-moz-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+}/*Firefox 18-*/
+:-ms-input-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+}
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+      считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+header {
+    margin: 14px 18px 19px 16px;
+    display: flex;
+    align-items: center;
+
+}
+main {
 }
 body {
     font-family: SF UI Text;
@@ -21,6 +66,7 @@ body {
     /* or 141% */
     letter-spacing: -0.03em;
     color: #20282F;
+
 }
 h1 {
     font-family: SF UI Display;
@@ -38,6 +84,7 @@ h2 {
     display: flex;
     align-items: center;
     letter-spacing: -0.01em;
+    color: #3A4248;
 }
 a {
     text-decoration: none;
@@ -46,12 +93,28 @@ textarea {
     border: none;
     background: none;
     outline: none;
+    resize:none;
+    width: 100%;
+}
+input {
+    text-align: right;
 }
 .note-maker {
     color: rgba(55, 65, 72, 0.5);
-    width: 100%;
+    height: 140px;
+    margin: 20px 12px;
+    padding: 15px 24px 19px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(13, 63, 103, 0.14);
+    border-radius: 6px;
 }
 .note-maker__buttons {
+    margin-top: auto;
     display: flex;
     align-items: flex-end;
     width: 100%;
@@ -74,4 +137,20 @@ textarea {
 .toolbar {
     width: 40px;
     height: 40px;
+}
+.notes {
+    color: #20282F;
+}
+.notes__note {
+    margin: 12px;
+    padding: 17px 24px 22px 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(13, 63, 103, 0.1);
+    border-radius: 0px 6px 6px 0px;
+}
+.notes__note_odd {
+    border-left: 3px solid #1EE3CF;
+}
+.notes__note_even {
+    border-left: 3px solid #6B48FF;
 }

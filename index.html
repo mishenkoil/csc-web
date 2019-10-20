@@ -17,31 +17,27 @@
 <header>
     <div class="logo">
         <a href="">
-            <img src="img/logo csc.svg" alt="logo">
-            <h1>Notes</h1>
+            <div class="logo__picture"><img src="img/logo csc.svg" alt="logo"></div>
+            <div class="logo__text"><h1>Notes</h1></div>
         </a>
     </div>
 
     <form class="search-form">
         <div class="search-form__content">
-            <input class="search-form__input" type="search">
+            <!--<input class="search-form__input" type="search">-->
             <button class="search-form__button"><img src="img/search.svg" alt="search button"></button>
         </div>
     </form>
 
     <button class="toolbar">
-        <img src="img/Group.svg" alt="toolbar">
+        <img src="img/menu.svg" alt="toolbar">
     </button>
 </header>
 
 <main>
     <form class="note-maker">
-            <textarea class="note-maker__title">
-                Title
-            </textarea>
-        <textarea class="note-maker__text">
-                Take a note...
-            </textarea>
+        <textarea class="note-maker__title" placeholder="Title"></textarea>
+        <textarea class="note-maker__text" placeholder="Take a note..."></textarea>
         <div class="note-maker__buttons">
             <div class="note-maker__buttons-left"><img src="img/color.svg" alt="choose color"></div>
             <div class="note-maker__buttons-right">
@@ -52,23 +48,23 @@
     </form>
 
     <article class="notes">
-        <article class="notes__note">
+        <article class="notes__note notes__note_odd">
             <h2>Assignment #1. Markup</h2>
             <p>Create basic markup using html tags and containers. The main output from this assigment is an index.html file</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_even">
             <h2>Assignment #2. Styling</h2>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_odd">
             <h2>Assignment #3. Set up project and create React Components</h2>
             <p>Create react app project, move all index.html and styles.css to React components. Split components to chunks</p>
         </article>
-        <article>
+        <article class="notes__note notes__note_even">
             <h2>Assignment #4. Store & Data Management</h2>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_odd">
             <h2>Assignment #5. API</h2>
             <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
         </article>
