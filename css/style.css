@@ -9,40 +9,10 @@
     font-style: normal;
     src: url('../fonts/sf-ui-text/SFUIText-Regular.ttf') format('TrueType');
 }
-::-webkit-input-placeholder {
-    font-family: SF UI Text;
-    font-size: 17px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.03em;
-}
-::-moz-placeholder {
-    font-family: SF UI Text;
-    font-size: 17px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.03em;
-}/*Firefox 19+*/
-:-moz-placeholder {
-    font-family: SF UI Text;
-    font-size: 17px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.03em;
-}/*Firefox 18-*/
-:-ms-input-placeholder {
-    font-family: SF UI Text;
-    font-size: 17px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.03em;
-}
+
 button {
     padding: 0;
+    margin: 0;
     border: none;
     font: inherit;
     color: inherit;
@@ -51,14 +21,16 @@ button {
       считают, что необходимо оставлять стрелочный вид для кнопок */
     cursor: pointer;
 }
+
 header {
-    margin: 14px 18px 19px 16px;
+    padding: 15px 12px 15px 13px;
     display: flex;
     align-items: center;
-
 }
+
 main {
 }
+
 body {
     font-family: SF UI Text;
     font-size: 17px;
@@ -68,6 +40,7 @@ body {
     color: #20282F;
 
 }
+
 h1 {
     font-family: SF UI Display;
     font-size: 26px;
@@ -75,82 +48,208 @@ h1 {
     letter-spacing: -0.01em;
     /* black-main .7 */
     color: rgba(13, 63, 103, 0.7);
+
 }
+
 h2 {
     font-family: SF UI Display;
     font-size: 20px;
     line-height: 24px;
     /* identical to box height, or 120% */
-    display: flex;
-    align-items: center;
     letter-spacing: -0.01em;
     color: #3A4248;
 }
+
 a {
     text-decoration: none;
 }
+
 textarea {
     border: none;
     background: none;
     outline: none;
-    resize:none;
+    resize: none;
     width: 100%;
 }
+
 input {
-    text-align: right;
+    text-align: left;
+    border: none;
+    background: none;
+    outline: none;
+    height: 24px;
 }
-.note-maker {
-    color: rgba(55, 65, 72, 0.5);
-    height: 140px;
-    margin: 20px 12px;
-    padding: 15px 24px 19px 16px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.search-form_default {
 
-    background: #FFFFFF;
-    box-shadow: 0px 4px 12px rgba(13, 63, 103, 0.14);
-    border-radius: 6px;
 }
-.note-maker__buttons {
-    margin-top: auto;
+
+.search-form_active {
+}
+
+.search-form__content {
     display: flex;
-    align-items: flex-end;
-    width: 100%;
+    flex-flow: row-reverse;
+    align-items: center;
 }
-.cancel {
-    margin-left: auto;
+
+.logo__link {
+    display: flex;
+    align-items: center;
 }
+
 .logo {
-    width: 134px;
     height: 32px;
 }
-.note-maker__buttons-right {
-    margin-left: auto;
+
+.logo__text {
+    margin-left: 6px;
 }
+
 .search-form {
     margin-left: auto;
     width: 40px;
     height: 40px;
 }
+
 .toolbar {
     width: 40px;
     height: 40px;
 }
+
+.note-maker {
+    color: rgba(55, 65, 72, 0.5);
+    margin: 0 12px 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(13, 63, 103, 0.14);
+    border-radius: 6px;
+}
+
+.note-maker_default {
+    padding: 16px 24px 16px 16px;
+}
+
+.note-maker_active {
+    padding: 15px 8px 10px 8px;
+}
+
+.note-maker_input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px 0 8px;
+}
+
+.note-maker__title_default::-webkit-input-placeholder {
+    font-family: SF UI Display;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    color: rgba(55, 65, 72, 0.5);
+}
+
+.note-maker__text_default::-webkit-input-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: rgba(55, 65, 72, 0.5);
+}
+
+.note-maker__title_active::-webkit-input-placeholder {
+    font-family: SF UI Display;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    color: #3A4248;
+}
+
+.note-maker__text_active::-webkit-input-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #333333;
+}
+
+.note-maker__buttons {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+
+}
+
+.note-maker__buttons-left {
+}
+
+.note-maker__buttons-left_default {
+}
+
+.note-maker__buttons-left_active {
+}
+
+.note-maker__button-color {
+    width: 40px;
+    height: 40px;
+}
+
+.note-maker__buttons-right {
+    margin-left: auto;
+}
+
+.note-maker__button-cancel {
+    width: 40px;
+    height: 40px;
+}
+
+.note-maker__button-submit {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.cancel {
+    margin-left: auto;
+}
+
 .notes {
     color: #20282F;
 }
+
 .notes__note {
-    margin: 12px;
+    margin: 12px 12px 0 12px;
     padding: 17px 24px 22px 16px;
     background: #FFFFFF;
     box-shadow: 0px 2px 5px rgba(13, 63, 103, 0.1);
     border-radius: 0px 6px 6px 0px;
 }
-.notes__note_odd {
+
+.notes__note:first-child {
+    margin-top: 20px;
+}
+
+.notes__note:nth-of-type(odd) {
     border-left: 3px solid #1EE3CF;
 }
-.notes__note_even {
+
+.notes__note:nth-of-type(even) {
     border-left: 3px solid #6B48FF;
 }
+
