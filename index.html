@@ -17,16 +17,16 @@
 <body>
 <header>
     <div class="logo">
-        <a class="logo__link" href="">
+        <!--<a class="logo__link" href="">
             <div class="logo__picture"><img src="img/logo csc.svg" alt="logo"></div>
             <div class="logo__text"><h1>Notes</h1></div>
-        </a>
+        </a>-->
     </div>
 
     <form class="search-form">
         <div class="search-form__content">
-            <!--<input class="search-form__input" type="search" placeholder="Search notes">-->
             <div class="search-form__button"><img src="img/search.svg" alt="search button"></div>
+            <input class="search-form__input" type="search" placeholder="Search notes">
         </div>
     </form>
 
@@ -38,8 +38,8 @@
 <main>
     <form class="note-maker note-maker_active">
         <div class="note-maker_input">
-            <textarea class="note-maker__title_active" placeholder="Title"></textarea>
-            <textarea class="note-maker__text_active" placeholder="Take a note..."></textarea>
+            <textarea class="note-maker__title note-maker__title_default" placeholder="Title"></textarea>
+            <textarea class="note-maker__text note-maker__text_default" placeholder="Take a note..."></textarea>
         </div>
         <div class="note-maker__buttons">
             <div class="note-maker__buttons-left">

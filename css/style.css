@@ -23,7 +23,7 @@ button {
 }
 
 header {
-    padding: 15px 12px 15px 13px;
+    padding: 15px 12px 15px 16px;
     display: flex;
     align-items: center;
 }
@@ -72,6 +72,31 @@ textarea {
     width: 100%;
 }
 
+textarea.note-maker__text {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    /* or 141% */
+
+    letter-spacing: -0.03em;
+
+    color: #333333;
+}
+
+textarea.note-maker__title {
+    font-family: SF UI Display;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 120% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+
+    color: #3A4248;
+
+}
+
 input {
     text-align: left;
     border: none;
@@ -87,10 +112,24 @@ input {
 .search-form_active {
 }
 
+.search-form {
+    margin-left: auto;
+}
+
 .search-form__content {
+    height: 40px;
     display: flex;
-    flex-flow: row-reverse;
     align-items: center;
+}
+
+.search-form_button {
+    width: 40px;
+    height: 40px;
+}
+
+.search-form__input {
+    box-sizing: border-box;
+    width: 265px;
 }
 
 .logo__link {
@@ -104,12 +143,6 @@ input {
 
 .logo__text {
     margin-left: 6px;
-}
-
-.search-form {
-    margin-left: auto;
-    width: 40px;
-    height: 40px;
 }
 
 .toolbar {
