@@ -1,25 +1,11 @@
 @font-face {
     font-family: 'SF UI Display';
-    font-style: normal;
     src: url('../fonts/sf-ui-display/sf-ui-display-bold.otf') format('OpenType');
 }
 
 @font-face {
     font-family: 'SF UI Text';
-    font-style: normal;
     src: url('../fonts/sf-ui-text/SFUIText-Regular.ttf') format('TrueType');
-}
-
-button {
-    padding: 0;
-    margin: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    /* отображаем курсор в виде руки при наведении; некоторые
-      считают, что необходимо оставлять стрелочный вид для кнопок */
-    cursor: pointer;
 }
 
 header {
@@ -28,16 +14,13 @@ header {
     align-items: center;
 }
 
-main {
-}
-
 body {
     font-family: SF UI Text;
     font-size: 17px;
     line-height: 24px;
     /* or 141% */
-    letter-spacing: -0.03em;
-    color: #20282F;
+    letter-spacing: -0.5px;
+    color: rgba(32, 40, 47, 1);
 
 }
 
@@ -45,7 +28,7 @@ h1 {
     font-family: SF UI Display;
     font-size: 26px;
     line-height: 31px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.25px;
     /* black-main .7 */
     color: rgba(13, 63, 103, 0.7);
 
@@ -56,8 +39,8 @@ h2 {
     font-size: 20px;
     line-height: 24px;
     /* identical to box height, or 120% */
-    letter-spacing: -0.01em;
-    color: #3A4248;
+    letter-spacing: -0.2px;
+    color: rgba(58, 66, 72, 1);
 }
 
 a {
@@ -78,9 +61,9 @@ textarea.note-maker__text {
     line-height: 24px;
     /* or 141% */
 
-    letter-spacing: -0.03em;
+    letter-spacing: -0.5px;
 
-    color: #333333;
+    color: rgba(51, 51, 51, 1);
 }
 
 textarea.note-maker__title {
@@ -91,9 +74,9 @@ textarea.note-maker__title {
 
     display: flex;
     align-items: center;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.2px;
 
-    color: #3A4248;
+    color: rgba(58, 66, 72, 1);
 
 }
 
@@ -113,24 +96,43 @@ input {
 }
 
 .search-form {
+    width: 100%;
     margin-left: auto;
 }
 
 .search-form__content {
     height: 40px;
-    display: flex;
-    align-items: center;
+    display: table;
+    width: 100%;
 }
 
 .search-form_button {
     width: 40px;
     height: 40px;
+    margin-left: auto;
 }
 
-.search-form__input {
-    box-sizing: border-box;
-    width: 265px;
+.flexible-input { display: table-cell; width: 0; }
+.flexible-input:last-child { width: 100%; }
+.search-form__input { width: 100%; box-sizing: border-box; }
+
+@media (min-width: 640px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
 }
+@media (min-width: 1024px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
 
 .logo__link {
     display: flex;
@@ -151,11 +153,11 @@ input {
 }
 
 .note-maker {
-    color: rgba(55, 65, 72, 0.5);
     margin: 0 12px 0 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: rgba(55, 65, 72, 0.5);
 
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(13, 63, 103, 0.14);
@@ -185,7 +187,7 @@ input {
     line-height: 24px;
     display: flex;
     align-items: center;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.2px;
     color: rgba(55, 65, 72, 0.5);
 }
 
@@ -195,7 +197,7 @@ input {
     line-height: 24px;
     display: flex;
     align-items: center;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.5px;
     color: rgba(55, 65, 72, 0.5);
 }
 
@@ -205,8 +207,8 @@ input {
     line-height: 24px;
     display: flex;
     align-items: center;
-    letter-spacing: -0.01em;
-    color: #3A4248;
+    letter-spacing: -0.2px;
+    color: rgba(58, 66, 72, 1);
 }
 
 .note-maker__text_active::-webkit-input-placeholder {
@@ -215,8 +217,8 @@ input {
     line-height: 24px;
     display: flex;
     align-items: center;
-    letter-spacing: -0.03em;
-    color: #333333;
+    letter-spacing: -0.5px;
+    color: rgba(51, 51, 51, 1);
 }
 
 .note-maker__buttons {
@@ -260,13 +262,13 @@ input {
 }
 
 .notes {
-    color: #20282F;
+    color: rgba(32, 40, 47, 1);
 }
 
 .notes__note {
     margin: 12px 12px 0 12px;
-    background: #FFFFFF;
     box-shadow: 0px 2px 5px rgba(13, 63, 103, 0.1);
+    background: rgba(255, 255, 255, 1);
 }
 
 .notes__note_active {
@@ -284,11 +286,11 @@ input {
 }
 
 .notes__note_default:nth-of-type(odd) {
-    border-left: 3px solid #1EE3CF;
+    border-left: 3px solid rgba(30, 227, 207, 1);
 }
 
 .notes__note_default:nth-of-type(even) {
-    border-left: 3px solid #6B48FF;
+    border-left: 3px solid rgba(107, 72, 255, 1);
 }
 
 .notes_text {
@@ -336,3 +338,21 @@ input {
     height: 40px;
     margin-left: 10px;
 }
+
+@media (min-width: 640px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
