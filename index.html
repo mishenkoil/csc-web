@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+
     <title>CSC Notes</title>
 
     <link rel="stylesheet" href="./css/reset.css">
@@ -16,34 +17,37 @@
 <body>
 <header>
     <div class="logo">
-        <a href="">
-            <img src="img/logo csc.svg" alt="logo">
-            <h1>Notes</h1>
+        <a class="logo__link" href="">
+            <div class="logo__picture"><img src="img/logo csc.svg" alt="logo"></div>
+            <div class="logo__text"><h1>Notes</h1></div>
         </a>
     </div>
 
     <form class="search-form">
         <div class="search-form__content">
-            <input class="search-form__input" type="search">
-            <button class="search-form__button"><img src="img/search.svg" alt="search button"></button>
+            <div class="search-form__button"><img src="img/search.svg" alt="search button"></div>
+            <span class="flexible-input"><input class="search-form__input" type="search" placeholder="Search notes"></span>
         </div>
     </form>
 
     <button class="toolbar">
-        <img src="img/Group.svg" alt="toolbar">
+        <img src="img/menu.svg" alt="toolbar">
     </button>
 </header>
 
 <main>
-    <form class="note-maker">
-            <textarea class="note-maker__title">
-                Title
-            </textarea>
-        <textarea class="note-maker__text">
-                Take a note...
-            </textarea>
+    <form class="note-maker note-maker_active">
+        <div class="note-maker_input">
+            <textarea class="note-maker__title note-maker__title_default" placeholder="Title"></textarea>
+            <textarea class="note-maker__text note-maker__text_default" placeholder="Take a note..."></textarea>
+        </div>
         <div class="note-maker__buttons">
-            <div class="note-maker__buttons-left"><img src="img/color.svg" alt="choose color"></div>
+            <div class="note-maker__buttons-left">
+                <div class="note-maker__button-color"><img src="img/color.svg" alt="choose color"></div>
+                <div><img src="img/color-1.svg" alt="choose color"></div>
+                <div><img src="img/color-2.svg" alt="choose color"></div>
+                <div><img src="img/color-3.svg" alt="choose color"></div>
+            </div>
             <div class="note-maker__buttons-right">
                 <button class="note-maker__button-cancel"><img src="img/cancel.svg" alt="cancel"></button>
                 <button class="note-maker__button-submit" type="submit"><img src="img/save.svg" alt="save"></button>
@@ -52,29 +56,50 @@
     </form>
 
     <article class="notes">
-        <article class="notes__note">
+        <article class="notes__note notes__note_default">
             <h2>Assignment #1. Markup</h2>
-            <p>Create basic markup using html tags and containers. The main output from this assigment is an index.html file</p>
+            <p>Create basic markup using html tags and containers. The main output from this assigment is an index.html
+                file</p>
         </article>
-        <article class="notes__note">
-            <h2>Assignment #2. Styling</h2>
-            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
+        <article class="notes__note notes__note_active">
+            <div class="notes_text">
+                <h2>Assignment #2. Styling</h2>
+                <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should
+                    be in
+                    BEM naming convention. Each block or element should be reusable as a component. Result is static
+                    pixel-perfect markup without interaction</p>
+            </div>
+            <div class="notes__buttons">
+                <div class="notes__buttons-left">
+                    <div><img src="img/color-2.svg" alt="choose color"></div>
+                </div>
+                <div class="notes__buttons-right">
+                    <button class="notes__button-delete"><img src="img/delete.svg" alt="delete"></button>
+                    <button class="notes__button-cancel"><img src="img/cancel.svg" alt="cancel"></button>
+                    <button class="notes__button-submit" type="submit"><img src="img/save.svg" alt="save"></button>
+                </div>
+            </div>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_default">
             <h2>Assignment #3. Set up project and create React Components</h2>
-            <p>Create react app project, move all index.html and styles.css to React components. Split components to chunks</p>
+            <p>Create react app project, move all index.html and styles.css to React components. Split components to
+                chunks</p>
         </article>
-        <article>
+        <article class="notes__note notes__note_default">
             <h2>Assignment #4. Store & Data Management</h2>
-            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
+            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in
+                BEM naming convention. Each block or element should be reusable as a component. Result is static
+                pixel-perfect markup without interaction</p>
         </article>
-        <article class="notes__note">
+        <article class="notes__note notes__note_default">
             <h2>Assignment #5. API</h2>
-            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in BEM naming convention. Each block or element should be reusable as a component. Result is static pixel-perfect markup without interaction</p>
+            <p>Add styling and provide new styles.css file that linked with existing index.html. Each class should be in
+                BEM naming convention. Each block or element should be reusable as a component. Result is static
+                pixel-perfect markup without interaction</p>
         </article>
     </article>
 </main>
-
+<!--<script src="infinite-scroll.js"></script>-->
 </body>
 
 </html>

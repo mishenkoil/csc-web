@@ -1,77 +1,358 @@
 @font-face {
     font-family: 'SF UI Display';
-    font-style: normal;
     src: url('../fonts/sf-ui-display/sf-ui-display-bold.otf') format('OpenType');
 }
 
 @font-face {
     font-family: 'SF UI Text';
-    font-style: normal;
     src: url('../fonts/sf-ui-text/SFUIText-Regular.ttf') format('TrueType');
 }
+
 header {
+    padding: 15px 12px 15px 16px;
     display: flex;
     align-items: center;
-    width: 100%;
 }
+
 body {
     font-family: SF UI Text;
     font-size: 17px;
     line-height: 24px;
     /* or 141% */
-    letter-spacing: -0.03em;
-    color: #20282F;
+    letter-spacing: -0.5px;
+    color: rgba(32, 40, 47, 1);
+
 }
+
 h1 {
     font-family: SF UI Display;
     font-size: 26px;
     line-height: 31px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.25px;
     /* black-main .7 */
     color: rgba(13, 63, 103, 0.7);
+
 }
+
 h2 {
     font-family: SF UI Display;
     font-size: 20px;
     line-height: 24px;
     /* identical to box height, or 120% */
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.2px;
+    color: rgba(58, 66, 72, 1);
 }
+
 a {
     text-decoration: none;
 }
+
 textarea {
     border: none;
     background: none;
     outline: none;
-}
-.note-maker {
-    color: rgba(55, 65, 72, 0.5);
+    resize: none;
     width: 100%;
 }
-.note-maker__buttons {
+
+textarea.note-maker__text {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    /* or 141% */
+
+    letter-spacing: -0.5px;
+
+    color: rgba(51, 51, 51, 1);
+}
+
+textarea.note-maker__title {
+    font-family: SF UI Display;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 120% */
+
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    letter-spacing: -0.2px;
+
+    color: rgba(58, 66, 72, 1);
+
+}
+
+input {
+    text-align: left;
+    border: none;
+    background: none;
+    outline: none;
+    height: 24px;
+}
+
+.search-form_default {
+
+}
+
+.search-form_active {
+}
+
+.search-form {
+    width: 100%;
+    margin-left: auto;
+}
+
+.search-form__content {
+    height: 40px;
+    display: table;
     width: 100%;
 }
-.cancel {
-    margin-left: auto;
-}
-.logo {
-    width: 134px;
-    height: 32px;
-}
-.note-maker__buttons-right {
-    margin-left: auto;
-}
-.search-form {
-    margin-left: auto;
+
+.search-form_button {
     width: 40px;
     height: 40px;
+    margin-left: auto;
 }
+
+.flexible-input { display: table-cell; width: 0; }
+.flexible-input:last-child { width: 100%; }
+.search-form__input { width: 100%; box-sizing: border-box; }
+
+@media (min-width: 640px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+
+.logo__link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 32px;
+}
+
+.logo__text {
+    margin-left: 6px;
+}
+
 .toolbar {
     width: 40px;
     height: 40px;
 }
+
+.note-maker {
+    margin: 0 12px 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(55, 65, 72, 0.5);
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(13, 63, 103, 0.14);
+    border-radius: 6px;
+}
+
+.note-maker_default {
+    padding: 16px 24px 16px 16px;
+}
+
+.note-maker_active {
+    padding: 15px 8px 10px 8px;
+}
+
+.note-maker_input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px 0 8px;
+}
+
+.note-maker__title_default::-webkit-input-placeholder {
+    font-family: SF UI Display;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.2px;
+    color: rgba(55, 65, 72, 0.5);
+}
+
+.note-maker__text_default::-webkit-input-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+    color: rgba(55, 65, 72, 0.5);
+}
+
+.note-maker__title_active::-webkit-input-placeholder {
+    font-family: SF UI Display;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.2px;
+    color: rgba(58, 66, 72, 1);
+}
+
+.note-maker__text_active::-webkit-input-placeholder {
+    font-family: SF UI Text;
+    font-size: 17px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.note-maker__buttons {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+}
+
+.note-maker__buttons-left {
+    display: flex;
+    align-items: center;
+}
+
+.note-maker__buttons-left_default {
+}
+
+.note-maker__buttons-left_active {
+}
+
+.note-maker__button-color {
+    width: 40px;
+    height: 40px;
+}
+
+.note-maker__buttons-right {
+    margin-left: auto;
+}
+
+.note-maker__button-cancel {
+    width: 40px;
+    height: 40px;
+}
+
+.note-maker__button-submit {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.notes {
+    color: rgba(32, 40, 47, 1);
+}
+
+.notes__note {
+    margin: 12px 12px 0 12px;
+    box-shadow: 0px 2px 5px rgba(13, 63, 103, 0.1);
+    background: rgba(255, 255, 255, 1);
+}
+
+.notes__note_active {
+    padding: 17px 8px 8px 8px;
+    border-radius: 6px;
+}
+
+.notes__note_default {
+    padding: 17px 24px 22px 16px;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.notes__note:first-child {
+    margin-top: 20px;
+}
+
+.notes__note_default:nth-of-type(odd) {
+    border-left: 3px solid rgba(30, 227, 207, 1);
+}
+
+.notes__note_default:nth-of-type(even) {
+    border-left: 3px solid rgba(107, 72, 255, 1);
+}
+
+.notes_text {
+    margin: 0 8px;
+}
+
+.notes__buttons {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+
+
+}
+
+.notes__buttons-left {
+    display: flex;
+    align-items: center;
+}
+
+.notes__buttons-left_default {
+}
+
+.notes__buttons-left_active {
+}
+
+.notes__button-color {
+    width: 40px;
+    height: 40px;
+}
+
+.notes__buttons-right {
+    margin-left: auto;
+}
+
+.notes__button-cancel {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.notes__button-submit {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+@media (min-width: 640px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+}
+@media (min-width: 1024px) {
+    .search-form {
+        width: unset;
+        margin-left: auto;
+    }
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
