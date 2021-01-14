@@ -80,60 +80,6 @@ textarea.note-maker__title {
 
 }
 
-input {
-    text-align: left;
-    border: none;
-    background: none;
-    outline: none;
-    height: 24px;
-}
-
-.search-form_default {
-
-}
-
-.search-form_active {
-}
-
-.search-form {
-    width: 100%;
-    margin-left: auto;
-}
-
-.search-form__content {
-    height: 40px;
-    display: table;
-    width: 100%;
-}
-
-.search-form_button {
-    width: 40px;
-    height: 40px;
-    margin-left: auto;
-}
-
-.flexible-input { display: table-cell; width: 0; }
-.flexible-input:last-child { width: 100%; }
-.search-form__input { width: 100%; box-sizing: border-box; }
-
-@media (min-width: 640px) {
-    .search-form {
-        width: unset;
-        margin-left: auto;
-    }
-}
-@media (min-width: 1024px) {
-    .search-form {
-        width: unset;
-        margin-left: auto;
-    }
-    body {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-}
-
-
 .logo__link {
     display: flex;
     align-items: center;
@@ -147,11 +93,6 @@ input {
     margin-left: 6px;
 }
 
-.toolbar {
-    width: 40px;
-    height: 40px;
-}
-
 .note-maker {
     margin: 0 12px 0 12px;
     display: flex;
@@ -162,10 +103,6 @@ input {
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(13, 63, 103, 0.14);
     border-radius: 6px;
-}
-
-.note-maker_default {
-    padding: 16px 24px 16px 16px;
 }
 
 .note-maker_active {
@@ -230,22 +167,6 @@ input {
 
 }
 
-.note-maker__buttons-left {
-    display: flex;
-    align-items: center;
-}
-
-.note-maker__buttons-left_default {
-}
-
-.note-maker__buttons-left_active {
-}
-
-.note-maker__button-color {
-    width: 40px;
-    height: 40px;
-}
-
 .note-maker__buttons-right {
     margin-left: auto;
 }
@@ -269,11 +190,6 @@ input {
     margin: 12px 12px 0 12px;
     box-shadow: 0px 2px 5px rgba(13, 63, 103, 0.1);
     background: rgba(255, 255, 255, 1);
-}
-
-.notes__note_active {
-    padding: 17px 8px 8px 8px;
-    border-radius: 6px;
 }
 
 .notes__note_default {
@@ -303,40 +219,10 @@ input {
     width: 100%;
     box-sizing: border-box;
     margin-top: 4px;
-
-
-}
-
-.notes__buttons-left {
-    display: flex;
-    align-items: center;
-}
-
-.notes__buttons-left_default {
-}
-
-.notes__buttons-left_active {
-}
-
-.notes__button-color {
-    width: 40px;
-    height: 40px;
 }
 
 .notes__buttons-right {
     margin-left: auto;
-}
-
-.notes__button-cancel {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
-
-.notes__button-submit {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
 }
 
 @media (min-width: 640px) {
