@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Public Notes</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <a class="logo__link" href="">
+            <div class="logo__text"><h1>Public Notes</h1></div>
+        </a>
+    </div>
+</header>
+<main>
+    <div class="note-maker note-maker_active">
+        <div class="note-maker_input">
+            <textarea class="note-maker__title note-maker__title_default" placeholder="Title"></textarea>
+            <textarea class="note-maker__text note-maker__text_default" placeholder="Take a note..."></textarea>
+        </div>
+        <div class="note-maker__buttons">
+            <div class="note-maker__buttons-right">
+                <button class="note-maker__button-cancel"><img src="img/cancel.svg" alt="cancel"></button>
+                <button id="submit" class="note-maker__button-submit"><img src="img/save.svg" alt="save"></button>
+            </div>
+        </div>
+    </div>
+    <article class="notes">
+    </article>
+</main>
+<script src="client.js"></script>
+</body>
+</html>
